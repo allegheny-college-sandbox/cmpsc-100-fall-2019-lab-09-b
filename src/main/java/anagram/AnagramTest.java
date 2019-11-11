@@ -6,19 +6,19 @@ package wordgames;
  */
 public class AnagramTest {
  
-  private char[] wordA;
-  private char[] wordB;
+  private char[] nameA;
+  private char[] nameB;
   
   /** Constructor.
    *
    * @param nameA The first name to compare
    * @param nameB The second name to compare
    */
-  public AnagramTest (String wordA, String wordB) {
-    wordA = wordA.toLowerCase().replace(" ","");
-    wordB = wordB.toLowerCase().replace(" ","");
-    this.wordA = wordA.toCharArray();
-    this.wordB = wordB.toCharArray();
+  public AnagramTest (String nameA, String nameB) {
+    nameA = nameA.toLowerCase().replace(" ","");
+    nameB = nameB.toLowerCase().replace(" ","");
+    this.nameA = nameA.toCharArray();
+    this.nameB = nameB.toCharArray();
     sortCharacters();
   }
   
@@ -26,8 +26,8 @@ public class AnagramTest {
    *
    */
   private void sortCharacters() {
-    this.wordA = sort(this.wordA, this.wordA.length);
-    this.wordB = sort(this.wordB, this.wordB.length);
+    this.nameA = sort(this.nameA, this.nameA.length);
+    this.nameB = sort(this.nameB, this.nameB.length);
   }
   
   /** Sorts arrays representing names.
@@ -54,11 +54,11 @@ public class AnagramTest {
    *
    */
   public boolean testWords() {
-    if (this.wordA.length != this.wordB.length) {
+    if (this.nameA.length != this.nameB.length) {
       return false;
     }
-    for (int i = 0; i < this.wordA.length; i++) {
-      if (this.wordA[i] != this.wordB[i]) {
+    for (int i = 0; i < this.nameA.length; i++) {
+      if (this.nameA[i] != this.nameB[i]) {
         return false;
       }
     }

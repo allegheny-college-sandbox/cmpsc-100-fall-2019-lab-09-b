@@ -14,7 +14,7 @@ public class AnagramTest {
    * @param nameA The first name to compare
    * @param nameB The second name to compare
    */
-  public AnagramTest (String nameA, String nameB) {
+  public AnagramTest(String nameA, String nameB) {
     nameA = nameA.toLowerCase().replace(" ","");
     nameB = nameB.toLowerCase().replace(" ","");
     this.nameA = nameA.toCharArray();
@@ -35,10 +35,10 @@ public class AnagramTest {
    * @param array The array to sort
    */
   private char[] sort(char[] array, int index) {
-    if(index <= 0) {
+    if (index <= 0) {
       return array;
     }
-    for (int i = 0; i < array.length - 1; i++){
+    for (int i = 0; i < array.length - 1; i++) {
       if (array[i] < array[i + 1]) {
         char temp = array[i];
         array[i] = array[i + 1];

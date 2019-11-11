@@ -27,7 +27,7 @@ src/main:
             MatchFileFragment --fragment "public boolean testWords()" --count 1 --exact
             MatchFileFragment --fragment "for (" --count 2 --exact
             MatchFileRegex --regex "private\schar\[\]\ssort\(char\[\]\s[a-zA-Z0-9]+,(\s)?int\s[a-zA-Z0-9]+\)" --count 1 --exact
-            MatchFileRegex --regex "sort\([a-z0-9A-Z]=,(\s)?[a-z0-9A-Z]+\);" --count 1 --exact
+            MatchFileRegex --regex "sort\([a-z0-9A-Z]+,(\s)?[a-z0-9A-Z]+\);" --count 1 --exact
             MatchFileRegex --regex "char\s[a-zA-Z0-9]+\s=" --count 1
             CountSingleLineComments --language Java --count 5
             
